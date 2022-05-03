@@ -6,11 +6,12 @@ using API.Entities;
 
 namespace API.Data
 {
+    //static means we dont need new instance to start with
     public static class Dbinitializer
     {
         public static void Initialize(StoreContext context)
         {
-            if (context.Products.Any()) return;
+            if (context.Products.Any()) return; // if exists any record , return 
 
             var products = new List<Product>
             {
