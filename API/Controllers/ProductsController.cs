@@ -28,7 +28,7 @@ namespace API.Controllers
         {
             var products = await _context.Products.ToListAsync();
 
-            return products
+            return products;
         }
 
         [HttpGet("{id}")]  //api/products/3
